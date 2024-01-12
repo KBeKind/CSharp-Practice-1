@@ -175,11 +175,42 @@ Console.WriteLine(aStringBuilder);
 
 
 Student student1 = new Student();
-student1.displayDetails();
+student1.DisplayDetails();
 
 Student aStudent = new Student(3, "Duder");
-aStudent.displayDetails();
+aStudent.DisplayDetails();
 
-aStudent.acceptDetails("Klee", 1);
+aStudent.AcceptDetails( 1, "Klee");
 
-aStudent.displayDetails();
+aStudent.DisplayDetails();
+
+
+Marks marks1 = new Marks();
+//marks1.AcceptDetails(1, "KDawg");
+//marks1.DisplayDetails();
+
+
+
+SavingAccount aSavingAccount = new SavingAccount();
+
+aSavingAccount.getMessage();
+
+aSavingAccount.deposit();
+
+aSavingAccount.getBalance();
+
+aSavingAccount.withdraw();
+
+
+SavingAcc aSavingAcc = new SavingAcc();
+
+aSavingAcc.openAccount();
+aSavingAcc.deposit();
+aSavingAcc.balance();
+aSavingAcc.withdraw();
+
+Console.WriteLine(Calculator.increment());
+Console.WriteLine(Calculator.increment());
+Console.WriteLine(Calculator.increment());
+Console.WriteLine(Calculator.decrement());
+
