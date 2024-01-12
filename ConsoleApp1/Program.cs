@@ -1,4 +1,5 @@
 ﻿
+using System.Linq.Expressions;
 
 
 using System.Collections;
@@ -306,3 +307,38 @@ static void EventMessage() {
 }
 
 AnonymousMethod.InvokeMethod();
+
+
+int[] someNumbers = new int[] {2, 4, 6, 7, 1, 3, 10, 5, 5};
+
+// EXPRESSION LAMBDA
+var count = someNumbers.Count( n => n == 5 );
+
+// SAME STUFF BUT WITHOUT THE LAMBDA
+static bool CheckedIfFive(int aNum) { return aNum == 5; }
+var count2 = someNumbers.Count(CheckedIfFive);
+
+Console.WriteLine(count);
+Console.WriteLine(count2);
+
+// STATEMENT LAMBDA
+List<int> numbers2 = new List<int> {2, 4, 6, 7, 1, 3, 10, 5, 5};
+var count3 = numbers2.Count(n => { return n==5; });
+Console.WriteLine(count3);
+
+
+
+//Func<string, string, string> stringJoins = (str1, str2) => string.Concat(str1, str2);
+
+// EXPRESSION TREE
+Expression<Func<string, string, string>> stringJoinExpr = (str1, str2) => string.Concat(str1, str2);
+
+var func = stringJoinExpr.Compile();
+var resultAgain = func("Hello", " What up");
+
+Console.WriteLine(resultAgain);
+
+// THE TWO ABOVE CAN BE ON ONE LINE
+resultAgain = stringJoinExpr.Compile()("Hello", " What up");
+
+Console.WriteLine(resultAgain);
