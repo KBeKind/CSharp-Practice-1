@@ -224,3 +224,26 @@ Console.WriteLine(result);
 Employee emp1 = new Employee();
 
 emp1.DisplayDetails();
+
+
+User user = new User();
+
+user.Name = "Duderman";
+user.Age = 33;
+user.City = "St Louis";
+Console.WriteLine(user.Name);
+Console.WriteLine(user.CompanyName);
+Console.WriteLine(user.Age);
+Console.WriteLine(user.City);
+
+
+StringIndexerType stringIndexerType = new StringIndexerType();
+stringIndexerType[0] = "Hello";
+stringIndexerType[1] = "World";
+stringIndexerType[2] = "Duderman";
+stringIndexerType[3] = "Duder";
+stringIndexerType[4] = "Dude";
+
+for (int i=0; i<10; i++) {
+    Console.WriteLine(stringIndexerType[i]);
+}
