@@ -247,3 +247,7 @@ stringIndexerType[4] = "Dude";
 for (int i=0; i<10; i++) {
     Console.WriteLine(stringIndexerType[i]);
 }
+
+
+Months months = new Months();
+months.display();
