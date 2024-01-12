@@ -273,7 +273,6 @@ var anonObj = new {
         new {projectname = "Duderproject2", projectdescription = "Duderdescription2"},
         new {projectname = "Duderproject3", projectdescription = "Duderdescription3"},
     }
-    
 };
 
 
@@ -286,3 +285,24 @@ Console.WriteLine(anonObj.address.city);
 foreach (var project in anonObj.projects) {
     Console.WriteLine(project.projectname + ": " + project.projectdescription);
 }
+
+
+CalculateDelegate c1 = new CalculateDelegate(DelegateExample.addition);
+CalculateDelegate c2 = new CalculateDelegate(DelegateExample.multiplication);
+
+c1(100);
+Console.WriteLine(DelegateExample.getNumber());
+c2(200);
+Console.WriteLine(DelegateExample.getNumber());
+
+
+// SUBSCRIBER MODEL
+EventsExample events = new EventsExample();
+events.event_OddNumber += new EventsExample.delegate_OddNumber(EventMessage);
+events.addition();
+
+static void EventMessage() {
+    Console.WriteLine("Event Executed: Odd Number");
+}
+
+AnonymousMethod.InvokeMethod();
