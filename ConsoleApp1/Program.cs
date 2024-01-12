@@ -214,3 +214,13 @@ Console.WriteLine(Calculator.increment());
 Console.WriteLine(Calculator.increment());
 Console.WriteLine(Calculator.decrement());
 
+
+int number = 100;
+
+bool result = number.IsGreaterThan(1000);
+Console.WriteLine(result);
+
+
+Employee emp1 = new Employee();
+
+emp1.DisplayDetails();
