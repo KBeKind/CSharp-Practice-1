@@ -251,3 +251,38 @@ for (int i=0; i<10; i++) {
 
 Months months = new Months();
 months.display();
+
+Calculation calculation = new Calculation();
+calculation.calculate(100, 0);
+
+calculation.calculate(100, 10);
+
+// calculation.calculate2();
+
+
+var anonObj = new {
+    firstName = "Duder",
+    lastName = "Dudeman",
+    salary = 10000000,
+    address = new {
+        streetname = "Duderstreet",
+        city = "Dudercity",
+    },
+    projects = new[] {
+        new {projectname = "Duderproject", projectdescription = "Duderdescription"},
+        new {projectname = "Duderproject2", projectdescription = "Duderdescription2"},
+        new {projectname = "Duderproject3", projectdescription = "Duderdescription3"},
+    }
+    
+};
+
+
+Console.WriteLine(anonObj.firstName);
+Console.WriteLine(anonObj.lastName);
+Console.WriteLine(anonObj.salary);
+Console.WriteLine(anonObj.address.streetname);
+Console.WriteLine(anonObj.address.city);
+
+foreach (var project in anonObj.projects) {
+    Console.WriteLine(project.projectname + ": " + project.projectdescription);
+}

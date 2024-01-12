@@ -13,9 +13,12 @@ enum MonthsEnum {
 
 internal class Months {
     public void display() {
-        Console.WriteLine(MonthsEnum.March);
-        Console.WriteLine(MonthsEnum.April);
-        Console.WriteLine(MonthsEnum.May);
+        int aMonth = (int)MonthsEnum.March;
+        Console.WriteLine(MonthsEnum.March + " : " + aMonth);
+        aMonth = (int)MonthsEnum.April;
+        Console.WriteLine(MonthsEnum.April + " : " + aMonth);
+        aMonth = (int)MonthsEnum.May;
+        Console.WriteLine(MonthsEnum.May + " : " + aMonth);
     }
 
 }
